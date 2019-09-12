@@ -1,276 +1,74 @@
-<XMBML version="1.0">
-    <View id="phoenix_beta">
+﻿<XMBML version="1.0">
+
+	<View id="phoenix_beta">
 		<Attributes>
-	        <Table key="main_item_00">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/pho.png</String></Pair>
-                <Pair key="title"><String>Minecraft 1.83 AIO Install</String></Pair>
-                <Pair key="info"><String>PhoenixV2.3 (Debug PKG) </String></Pair>
+			<Table key="phoenix_main">
+				<Pair key="icon"><String>/dev_hdd0/game/STRMING01/USRDIR/images/the_phoenix_podcast.png</String></Pair>	
+				<Pair key="title"><String>★ PhoenixARC XMB Downloader ★</String></Pair>
+				<Pair key="info"><String>download the latest mods!</String></Pair>
 			</Table>
-	        <Table key="main_item_01">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/pho.png</String></Pair>
-                <Pair key="title"><String>NPJB00549 (JP Digital) 1.83</String></Pair>
-                <Pair key="info"><String>PhoenixV2.3 (Debug PKG)</String></Pair>
-			</Table>
-            <Table key="main_item_02">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/pho.png</String></Pair>
-                <Pair key="title"><String>BLUS31426 (US Disc) 1.83</String></Pair>
-                <Pair key="info"><String>PhoenixV2.3 (Debug PKG)</String></Pair>
-            </Table>
-            <Table key="main_item_03">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/pho.png</String></Pair>
-                <Pair key="title"><String>NPEB01899 (EU Digital) 1.83</String></Pair>
-                <Pair key="info"><String>PhoenixV2.3 (Debug PKG)</String></Pair>
-            </Table>
-            <Table key="main_item_04">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/pho.png</String></Pair>
-                <Pair key="title"><String>NPUB31419 (US Digital) 1.83</String></Pair>
-                <Pair key="info"><String>PhoenixV2.3 (Debug PKG)</String></Pair>
-            </Table>
-			<Table key="main_item_05">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/pho.png</String></Pair>
-                <Pair key="title"><String>BLES01976 (EU Disc) 1.83</String></Pair>
-                <Pair key="info"><String>PhoenixV2.3 (Debug PKG)</String></Pair>
-            </Table>
-			<Table key="seg_blus_iso">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodisc.png</String></Pair>
-                <Pair key="title"><String>BLUS31426 - ISO</String></Pair>
-                <Pair key="info"><String>Download to dev_hdd0/PS3ISO</String></Pair>
-            </Table>
-			<Table key="seg_bles_iso">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodisc.png</String></Pair>
-                <Pair key="title"><String>BLES01976 - ISO</String></Pair>
-                <Pair key="info"><String>Download to dev_hdd0/PS3ISO</String></Pair>
-            </Table>
-			<Table key="main_updater">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phoupdate.png</String></Pair>
-                <Pair key="title"><String>Update Phoenix Downloder (HAN/OFW)</String></Pair>
-                <Pair key="info"><String>Revert To Standard Packages</String></Pair>
-            </Table>
-			<Table key="main_updater_hen">
-                <Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phoupdatebeta.png</String></Pair>
-                <Pair key="title"><String>Update Phoenix Downloder (BETA/HEN Packages)</String></Pair>
-                <Pair key="info"><String>Download latest Phoenix BETA/HEN Downloader (may be unstable)</String></Pair>
-            </Table>						
-        </Attributes>
-        <Items>
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_item_00"
-                attr="main_item_00"
-                src="#main_item_00_link"
-            />
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_item_01"
-                attr="main_item_01"
-                src="#main_item_01_link"
-            />
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_item_02"
-                attr="main_item_02"
-                src="#main_item_02_link"
-            />
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_item_03"
-                attr="main_item_03"
-                src="#main_item_03_link"
-            />
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_item_04"
-                attr="main_item_04"
-                src="#main_item_04_link"
-            />
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_item_05"
-                attr="main_item_05"
-                src="#main_item_05_link"
-            />
-			<Query
-				class="type:x-xmb/folder-pixmap"
-				key="seg_blus_iso"
-				attr="seg_blus_iso"
-				src="#seg_blus_iso"
-				/>
-			<Query
-				class="type:x-xmb/folder-pixmap"
-				key="seg_bles_iso"
-				attr="seg_bles_iso"
-				src="#seg_bles_iso"
-				/>	
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_updater"
-                attr="main_updater"
-                src="#main_updater_link"
-            />		
-		    <Query
-                class="type:x-xmb/folder-pixmap"
-                key="main_updater_hen"
-                attr="main_updater_hen"
-                src="#main_updater_hen_link"
-            />		
-        </Items>
-    </View>
-
-    <View id="main_item_00_link">
-        <Attributes>
-            <Table key="main_item_00">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://dl.dropboxusercontent.com/s/2y73dud6uzxs67a/phoenix-v2-3-beta-aio.pkg</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://dl.dropboxusercontent.com/s/2y73dud6uzxs67a/phoenix-v2-3-beta-aio.pkg</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>PHONIX-INSTALLER_90-0000000000000000</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_item_00" attr="main_item_00"/>
-        </Items>
-    </View>
-
-    <View id="main_item_01_link">
-        <Attributes>
-            <Table key="main_item_01">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/arane372oue6ysd/phoenixarc-v2.3-npjb00549.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/arane372oue6ysd/phoenixarc-v2.3-npjb00549.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>JP0127-NPJB00549_00-MINECRAFTPS30353</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_item_01" attr="main_item_01"/>
-        </Items>
-    </View>
-
-    <View id="main_item_02_link">
-        <Attributes>
-            <Table key="main_item_02">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/gsg1gyffb3u7o2r/phoenixarc-v2.3-blus31426.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/gsg1gyffb3u7o2r/phoenixarc-v2.3-blus31426.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>UP4433-BLUS31426_00-MINECRAFTPS30363</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_item_02" attr="main_item_02"/>
-        </Items>
-    </View>
-
-    <View id="main_item_03_link">
-        <Attributes>
-            <Table key="main_item_03">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/wozhmsghejr3q6c/phoenixarc-v2.3-npeb01899.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/wozhmsghejr3q6c/phoenixarc-v2.3-npeb01899.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>EP4433-NPEB01899_00-MINECRAFTPS30295</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_item_03" attr="main_item_03"/>
-        </Items>
-    </View>
-
-    <View id="main_item_04_link">
-        <Attributes>
-            <Table key="main_item_04">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/h124hy8q0let1ny/phoenixarc-v2.3-npub31419.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/h124hy8q0let1ny/phoenixarc-v2.3-npub31419.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>UP4433-NPUB31419_00-MINECRAFTPS30295</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_item_04" attr="main_item_04"/>
-        </Items>
-    </View>
-
-    <View id="main_item_05_link">
-        <Attributes>
-            <Table key="main_item_05">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/8z63djca22bvto9/phoenixarc-v2.3-bles01976.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/8z63djca22bvto9/phoenixarc-v2.3-bles01976.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>EP4433-BLES01976_00-MINECRAFTPS30363</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_item_05" attr="main_item_05"/>
-        </Items>
-    </View>
-	<View id="seg_blus_iso">
-		<Attributes>
-			<Table key="blus_iso">
-				<Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodisc.png</String></Pair>
-				<Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair>
-				<Pair key="title"><String>BLUS31426-ISO</String></Pair>
-				<Pair key="module_name"><String>webrender_plugin</String></Pair>
-				<Pair key="module_action"><String>http://www.dropbox.com/s/ch6es3gfgl0hqnu/Minecraft%20PlayStation3%20Edition%20%5BBLES01976%5D.iso?dl=1</String></Pair>
- 			</Table>
 		</Attributes>
 		<Items>
-			<Item class="type:x-xmb/module-action" key="blus_iso" attr="blus_iso" />
+			<Query class="type:x-xmb/folder-pixmap" key="phoenix_main" attr="phoenix_main" src="#phoenix_items"/>
 		</Items>
 	</View>
-	<View id="seg_bles_iso">
+	
+	<View id="phoenix_items">
 		<Attributes>
-			<Table key="bles_iso">
-				<Pair key="icon"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodisc.png</String></Pair>
-				<Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair>
-				<Pair key="title"><String>BLES01976-ISO</String></Pair>
-				<Pair key="module_name"><String>webrender_plugin</String></Pair>
-				<Pair key="module_action"><String>http://www.dropbox.com/s/ch6es3gfgl0hqnu/Minecraft%20PlayStation3%20Edition%20%5BBLES01976%5D.iso?dl=1</String></Pair>
- 			</Table>
+			<Table key="item_1"> 
+				<Pair key="icon"><String>/dev_hdd0/game/STRMING01/USRDIR/images/phoenix.png</String></Pair> 
+				<Pair key="title"><String>Minecraft 1.83 AIO Install</String></Pair> 
+				<Pair key="info"><String>v2.3 debug</String></Pair>
+			</Table>
 		</Attributes>
 		<Items>
-			<Item class="type:x-xmb/module-action" key="bles_iso" attr="bles_iso" />
+			<Query class="type:x-xmb/folder-pixmap" key="item_1" attr="item_1" src="#phoenix001_items"/>
+		</Items>
+	</View> 
+	
+	<View id="phoenix001_items">
+		<Attributes>
+			<Table key="item_1_001"> 
+				<Pair key="icon"><String>/dev_hdd0/game/STRMING01/USRDIR/images/watch.png</String></Pair> 
+				<Pair key="title"><String>PLAY</String></Pair> 
+				<Pair key="info"><String></String></Pair>
+				<Pair key="module_name"><String>webbrowser_plugin</String></Pair> 
+				<Pair key="module_action"><String>http://dl.dropboxusercontent.com/s/2y73dud6uzxs67a/phoenix-v2-3-beta-aio.pkg?dl=1</String></Pair> 
+			</Table>
+			<Table key="item_1_002"> 
+				<Pair key="icon"><String>/dev_hdd0/game/STRMING01/USRDIR/images/download.png</String></Pair> 
+				<Pair key="title"><String>DOWNLOAD</String></Pair> 
+				<Pair key="info"><String></String></Pair>
+				<Pair key="module_name"><String>webbrowser_plugin</String></Pair> 
+				<Pair key="module_action"><String>http://dl.dropboxusercontent.com/s/2y73dud6uzxs67a/phoenix-v2-3-beta-aio.pkg?dl=0</String></Pair> 
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/module-action" key="item_1_001" attr="item_1_001"/>
+			<Item class="type:x-xmb/module-action" key="item_1_002" attr="item_1_002"/>
+		</Items>
+	</View> 
+	
+	<View id="info_001_item">
+		<Attributes>
+			<Table key="info_001">
+				<Pair key="icon"><String>/dev_hdd0/game/STRMING01/USRDIR/images/blank.png</String></Pair>	
+				<Pair key="title"><String></String></Pair>
+				<Pair key="info"><String>The phoenix Podcast #001
+				
+				Title: How to make a custom skin for Minecraft | Playstation 3 | OFW
+				
+				Summary: Here's the toolkit 
+				https://mega.nz/#F!epFx0TRb!YqILbCodxDn_x76cps4ZXw
+				
+				Duration: 12'20"
+				
+				Released: Feb 16, 2018</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="info_001" attr="info_001"/>
 		</Items>
 	</View>
-
-
-    <View id="main_updater_link">
-        <Attributes>
-            <Table key="main_updater">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/yxyeyoesysz8e3l/Phoenix-Downloader_latest.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/yxyeyoesysz8e3l/Phoenix-Downloader_latest.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>UP0100-HANTOOLBX_00-PINK1000DEVIL303</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_updater" attr="main_updater"/>
-        </Items>
-    </View>
-
-    <View id="main_updater_hen_link">
-        <Attributes>
-            <Table key="main_updater_hen">
-                <Pair key="info"><String>net_package_install</String></Pair>
-                <Pair key="pkg_src"><String>http://www.dropbox.com/s/useexf3zzs89v1d/Phoenix-Downloader_latest-beta.pkg?dl=1</String></Pair>
-                <Pair key="pkg_src_qa"><String>http://www.dropbox.com/s/useexf3zzs89v1d/Phoenix-Downloader_latest-beta.pkg?dl=1</String></Pair>
-                <Pair key="content_name"><String>tool_pkg_install_pc</String></Pair>
-                <Pair key="content_id"><String>UP0100-HANTOOLBX_00-PINK1000DEVIL303</String></Pair>
-                <Pair key="prod_pict_path"><String>/dev_hdd0/game/HANTOOLBX/USRDIR/PSN_US_images/phodownload.png</String></Pair>
-            </Table>
-        </Attributes>
-        <Items>
-            <Item class="type:x-xmb/xmlnpsignup" key="main_updater_hen" attr="main_updater_hen"/>
-        </Items>
-    </View>
-
-</XMBML>
+	
+	</XMBML>
