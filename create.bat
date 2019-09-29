@@ -108,6 +108,7 @@ echo generating path...
 timeout 2 >NUL
 md path\PODCAST%podno%\USRDIR
 (
+echo ^<XMBML version="1.0"^>
 echo ^<View id="main"^>
 echo ^<Attributes^>
 echo ^<Table key="%podid%_main"^>
