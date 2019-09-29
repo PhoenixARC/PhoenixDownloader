@@ -32,9 +32,10 @@ echo Generate item info:        3   []
 echo Generate item description: 4   []
 echo complete XML (run once):   5   []
 echo How to compile into 1 xml: 6   []
+echo Auto compile into 1 xml:   7   []
 echo =================================
 echo choose what you do.
-set /p "opt=Choose 1-6: "
+set /p "opt=Choose 1-7: "
 cls
 if ["%opt%"] == ["1"] goto cp
 if ["%opt%"] == ["2"] goto ge
@@ -42,7 +43,17 @@ if ["%opt%"] == ["3"] goto gii
 if ["%opt%"] == ["4"] goto gid
 if ["%opt%"] == ["5"] goto fin
 if ["%opt%"] == ["6"] goto help
+if ["%opt%"] == ["7"] goto compile_ovwrte
 if ["%opt%"] == ["null"] goto error
+
+:compile_ovwrte
+set /p "podno=podcast#(no spaces)  PODCAST##: "
+(
+more path\PODCAST%podno%\USRDIR\1entries.xml
+more path\PODCAST%podno%\USRDIR\2info.xml
+more path\PODCAST%podno%\USRDIR\3urls.xml
+)>>path\PODCAST%podno%\USRDIR\podcast.xml
+
 
 :error
 echo not a valid option!
@@ -81,23 +92,13 @@ goto h1
 cls
 set /p "podno=podcast#(no spaces)  PODCAST##: "
 IF EXIST path\PODCAST%podno%\USRDIR\podcast.xml (
-	goto c1
+	goto ge1
 ) ELSE (
     echo error! podcast not existant!
 	pause
 	cls
 	goto h1
 )
-:c1
-set /p "id=ID(no spaces): "
-set /p "number=item#(no spaces/# only): "
-set /p "name=Name: "
-set /p "dur=Duration: "
-pause
-cls
-echo generating code entry...
-goto ge1
-
 :cp
 set /p "podno=podcast#(no spaces)  PODCAST##: "
 set /p "podname=Name your podcast: "
@@ -126,7 +127,6 @@ goto h1
 :ge1
 set /p "id=ID(no spaces): "
 set /p "number=item#(no spaces/# only): "
-set /p "podno=podcast#(no spaces)  PODCAST##: "
 set /p "name=Name: "
 set /p "dur=Duration: "
 timeout 3 ^>NUL
@@ -144,9 +144,9 @@ echo ^<Items^>
 echo ^<Query class="type:x-xmb/folder-pixmap" key="item_%number%" attr="item_%number%" src="#%id%00%number%_items"/^>
 echo ^</Items^>
 echo ^</View^>
-)^>^>path\PODCAST%podno%\USRDIR\1entries.xml
+)>>path\PODCAST%podno%\USRDIR\1entries.xml
 pause
-goto home
+goto h1
 
 :gid
 set /p "podno=podcast#(no spaces)  PODCAST##: "
@@ -168,10 +168,11 @@ echo ^<Items^>
 echo ^<Query class="type:x-xmb/folder-pixmap" key="info_00%number%" attr="info_00%number%"/^>
 echo ^</Items^>
 echo ^</View^>
-)^>^>path\PODCAST%podno%\USRDIR\2info.xml
+)>>path\PODCAST%podno%\USRDIR\2info.xml
 goto h1
 
 :gii
+set /p "podno=podcast#(no spaces)  PODCAST##: "
 IF EXIST path\PODCAST%podno%\USRDIR\3urls.xml (
     goto gii1
 ) ELSE (
@@ -180,18 +181,17 @@ IF EXIST path\PODCAST%podno%\USRDIR\3urls.xml (
 )
 
 :gii0
-set /p "podno=podcast#(no spaces)  PODCAST##: "
 set /p "id=ID(no spaces): "
 (
 echo ^<View id="pspodcast00%id%_items"^>
 echo ^<Attributes^>
-)^>^>path\PODCAST%podno%\USRDIR\3urls.xml
+)>>path\PODCAST%podno%\USRDIR\3urls.xml
 goto gii1
 
 :gii1
-set /p "podno=podcast#(no spaces)  PODCAST##: "
 set /p "id=ID(no spaces): "
-set /p "number=item#(no spaces/# only): 
+set /p "number=item#(no spaces/# only): "
+set /p "url=URL(http only): "
 (
 echo ^<Table key="item_%id%_001"^> 
 echo ^<Pair key="icon"^>^<String^>/dev_hdd0/game/PODCAST%podno%/USRDIR/images/blank.png^</String^>^</Pair^> "
@@ -211,7 +211,7 @@ echo ^<Item class="type:x-xmb/module-action" key="item_%id%_001" attr="item_%id%
 echo ^<Query class="type:x-xmb/folder-pixmap" key="info_00%number%_main" attr="info_00%number%_main" src="#info_00%number%_item"/^>
 echo ^</Items^>
 echo ^</View^> "
-)^>^>path\PODCAST%podno%\USRDIR\3urls.xml
+)>>path\PODCAST%podno%\USRDIR\3urls.xml
 goto h1
 
  REM Made by PhoenixARC -- posted to PSX-Place.com
