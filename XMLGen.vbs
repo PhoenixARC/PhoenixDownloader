@@ -47,7 +47,8 @@ Select Case InputBox ( _
 " [1] Create Playlist" & vbCrlf & _
 " [2] Add Playlist Entry" & vbCrlf & _
 " [3] Finish Playlist XMLs" & vbCrlf & _
-" [4] Build Playlist PKG", _
+" [4] Build Playlist PKG" & vbCrlf & _
+" [5] Compile Main XML", _
 "Main Menu")
 
 Case "1"
@@ -58,6 +59,8 @@ Case "3"
 Call sub6()
 Case "4"
 Call sub7()
+Case "5"
+Call sub8()
 Case Else
 WScript.Echo "You entered an invalid menu choice!"
 
@@ -85,10 +88,99 @@ dim b
 b = inputbox("Podcast Name")
 dim c
 c = inputbox("Podcast id")
-' Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("file.txt",2,true)
-' objFileToWrite.WriteLine("<XMBML version="1.0">")
-' objFileToWrite.WriteLine("<View id="main">")
-' objFileToWrite.Close
-' dim objFileToWrite
-' Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podno.txt",2,true)
+objFileToWrite.WriteLine(a)
+objFileToWrite.Close
+dim objFileToWrite
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podname.txt",2,true)
+objFileToWrite.WriteLine(b)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podid.txt",2,true)
+objFileToWrite.WriteLine(c)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+CreateObject("WScript.Shell").Run("createpodcast.bat")
+End Sub
+
+
+Sub sub5()
+dim a
+a = inputbox("Podcast Number")
+dim b
+b = inputbox("Podcast Name")
+dim c
+c = inputbox("Podcast id")
+dim e
+e = inputbox("Entry Name")
+dim f
+f = inputbox("Entry Duration")
+dim g
+g = inputbox("Item Number")
+dim h
+h = inputbox("URL (HTTP:// only)")
+dim i
+i = inputbox("Entry Description")
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("ename.txt",2,true)
+objFileToWrite.WriteLine(e)
+objFileToWrite.Close
+dim objFileToWrite
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("dur.txt",2,true)
+objFileToWrite.WriteLine(f)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("itemno.txt",2,true)
+objFileToWrite.WriteLine(g)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("url.txt",2,true)
+objFileToWrite.WriteLine(h)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("desc.txt",2,true)
+objFileToWrite.WriteLine(i)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+CreateObject("WScript.Shell").Run("gentry.bat")
+End Sub
+
+Sub sub6()
+dim a
+a = inputbox("Podcast Number")
+dim c
+c = inputbox("Podcast id")
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podno.txt",2,true)
+objFileToWrite.WriteLine(a)
+objFileToWrite.Close
+dim objFileToWrite
+Set objFileToWrite = Nothing
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podid.txt",2,true)
+objFileToWrite.WriteLine(c)
+objFileToWrite.Close
+Set objFileToWrite = Nothing
+CreateObject("WScript.Shell").Run("finni.bat")
+End Sub
+
+Sub sub8()
+dim a
+a = inputbox("Podcast Number")
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podno.txt",2,true)
+objFileToWrite.WriteLine(a)
+objFileToWrite.Close
+dim objFileToWrite
+Set objFileToWrite = Nothing
+CreateObject("WScript.Shell").Run("compile.bat")
+End Sub
+
+Sub sub7()
+dim a
+a = inputbox("Podcast Number")
+Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("podno.txt",2,true)
+objFileToWrite.WriteLine(a)
+objFileToWrite.Close
+dim objFileToWrite
+Set objFileToWrite = Nothing
+CreateObject("WScript.Shell").Run("build.bat")
 End Sub
